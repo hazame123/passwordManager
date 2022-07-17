@@ -1,0 +1,5 @@
+colorama==0.4.4
+cryptography==3.2.1
+pyperclip==1.8.1
+configparser==4.0.2
+
