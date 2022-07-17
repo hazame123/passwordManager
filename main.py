@@ -215,49 +215,6 @@ def passSetup():
 	# Set Master Password
 	def setMasterPass():
 
-# 		password_provided = getpass("Enter Master Password: ")  # This is input in the form of a string
-# 		password = password_provided.encode()  # Convert to type bytes
-# 		salt = b'56g3yurv939birv493v'  # CHANGE THIS - recommend using a key from os.urandom(16), must be of type bytes
-# 		kdf = PBKDF2HMAC(
-# 		    algorithm=hashes.SHA256(),
-# 		    length=32,
-# 		    salt=salt,
-# 		    iterations=100000,
-# 		    backend=default_backend()
-# 		)
-
-# 		key = base64.urlsafe_b64encode(kdf.derive(password))  # Can only use kdf once
-
-# 		cipher_suite = Fernet(key)
-
-# 		try:
-# 			masterPassTest = cipher_suite.decrypt(currentMasterPass.encode()).decode('ascii')
-
-# 			with open(currentDatabaseLoc, mode='r') as password_database:
-# 				password_reader = csv.reader(password_database, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-
-# 				for row in password_reader:
-# 					encrypted_username = row[1]
-# 					encrypted_password = row[2]
-# 					username = cipher_suite.decrypt(encrypted_username.encode())
-# 					password = cipher_suite.decrypt(encrypted_password.encode())
-
-# 					print(Fore.GREEN + "Password Correct!" + Fore.WHITE)
-
-# 					print(username)
-# 					print(password)
-
-# 		except InvalidToken as e:
-# 			print(Fore.RED + "Error: Incorrect Password - please try again!" + Fore.WHITE)
-# 			time.sleep(2)
-# 			mainMenu()
-
-
-# 		except InvalidToken as e:
-# 			print(Fore.RED + "Error: Incorrect Password - please try again!" + Fore.WHITE)
-# 			time.sleep(2)
-# 			passSetup()
-
 		masterPass1 = getpass("Enter New Master Password: ")
 		masterPass2 = getpass("Re-Enter New Master Password: ")
 
